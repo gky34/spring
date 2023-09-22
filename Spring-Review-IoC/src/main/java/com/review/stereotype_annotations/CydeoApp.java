@@ -1,11 +1,12 @@
 package com.review.stereotype_annotations;
 
+import com.review.bean_practice.AppConfig;
+import com.review.stereotype_annotations.model.DataStructure;
+import com.review.stereotype_annotations.model.ExtraHours;
+import com.review.stereotype_annotations.model.MicroServices;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import stereotype_annotations.config.AppConfig;
-import stereotype_annotations.model.DataStructure;
-import stereotype_annotations.model.ExtraHours;
-import stereotype_annotations.model.MicroServices;
+
 
 public class CydeoApp {
     public static void main(String[] args) {
