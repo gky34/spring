@@ -7,6 +7,13 @@
     <groupId>com.review</groupId>
     <artifactId>Spring-00-Coupling</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
