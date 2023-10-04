@@ -1,0 +1,126 @@
+Why Spring Boot??
+- Building a Spring application is DIFFICULT
+ - Which Maven archetype to use?
+ - What dependencies to choose
+ - Configuration (xml, java)
+ - How to install server
+
+=========================================================
+
+Spring Boots
+- Spring is an Ecosystem
+- Spring boots is one of the most popular Java framework
+- open source extension of the Spring Framework
+- it allows developer focus on the business logics rather than spending time
+  for dependency
+- Ability to create a standalone, production - ready Spring- based
+
+*** Convention-over-configuration solution
+	Focus on business logic and wrinting app rather than spending time configuration
+
+=========================================================
+
+Spring Feature
+- Fast Bootstrapping:
+	- provides a fast getting started experience
+		- Everything would be ready
+
+- Auto-configuration:
+	- automatically configures the bare minumum components
+
+- Opinionated:
+ 	- automatically configures several components stars with a Spring app.
+ 	- version and dependencies would be provided from whatever the communities using framework
+
+- Standalone:
+	- Spring boot has already come with (Tomcat) external web or application server
+	- not necessary dependeny server
+
+=========================================================
+
+Spring Project Structure
+
+src / main/ java : Contains application source code
+srr / resources :  Contains non- java resources 	(picture, html code)
+src/ test/ java :  Contains are test code 			(Unit test)
+
+mvnw and mwnw.cmd : These are maven wrapper scrips.
+ - Using these build your project, even if you don't have MAVEN installed on your machine.
+
+pom.xml : This is the MAVEN build specification
+
+CydeoApplication.java : This is the Spring Boot main class that bootstrapts in the project.
+
+application.properties: This file initally empty but offere a place where you can specify configuration properties.
+
+static    : 	Contains any static content (images,css,js,etc)
+templates :		Contains template files that will be used to render content to the browser (Thymeleaf)
+
+CydeoApplicationTest : This is a simple test class that ensures that the Spring application contect loads successfully. You will add more tests to the mix as you develop the application.
+
+=========================================================
+
+Spring Boot plugin:
+ - It provides a MAVEN goal that enables you to run the app
+ - It ensures that all dependency libraries are included within the exucutable JAR file
+ (Maven goal is under MAVEN lifecyle - plugings )
+
+=========================================================
+
+BootStrapping the application:
+- Running the application from an executable JAR, it's important to have a main class that will be exucuted from main class
+
+@SpringBootApplication
+	- is composite annotation that combines the folling annotations
+		- @SpringBootConfiguration
+		- @EnableAutoConfiguration
+		- @ComponentScan
+
+@SpringBootConfiguration
+- Designates this class as a configuration class.
+- You can add JAVA based Spring framework configuration to this class
+- is a specialized form of the @Configuration annotation.
+
+@EnableAutoConfiguration
+- Enables Spring Boots automatic configuration. It tells Spring Boot to automatically configure any components that it think you will need.
+
+
+@ComponentScan
+- Enables component scanning.
+- This lets you declare other classes with annotations like @Component to have Spring automatically discover and register them as components in the Spring application context.
+
+main() method :
+- calls a static run method on SpringApplication class
+	which performs the actual bootstrapping of the application, creating the Spring application context.
+=========================================================
+
+Application Properties files
+ - One of the most important file in Spring boot
+ - Whenever we run Spring boot app, it will pick it up the properties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

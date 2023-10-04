@@ -1,0 +1,66 @@
+HomeController
+
+@Controller Annotation
+- Annotate the class with the @Controller streotype annotations
+
+@RequestMapping
+- User this annotation to associate the action with an HTTP request path
+
+@RequestMapping("/user")    		  // end point that we want to call
+  public String user(){
+    return "/user/userinfo.html";     //go to folder static and look over there
+  }
+
+===============================================================================
+Spring MVC Flow
+- The client send an HTTP request
+- Dispatcher servlet uses the handler mapping to find out what controller call
+- The dispatcher servlet call the controllers action
+- After executing the action (method) associated with the HTTP request, the controller returns the view name(and data to view) the dispatcher servlet
+- The response sent back to the client
+
+===============================================================================
+Model
+- The model is a container for application
+- In control, any data can be added (string, objects, from database, etc)
+- View page can access data from model. HTML, OR temple access this modal
+
+===============================================================================
+
+Template Engine
+- is a dependency that allows you to get and display in the view variable data that the controller sends
+
+Spring supports manay view templates:
+- JSP (Java Server Pages)
+	- doesn't use HTML tags, doesn't support
+- Thymeleaf
+- Groovy
+- Jade
+
+Thymeleaf:
+- To be able to use it
+	- need a dependency
+	- The most popular one because of HTML tags and easy to convert
+	- We can use Thymeleaf addition to HTML tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+SPRING MVC
+
+What is a Web App?
+- you access through your web browser is a web app.
+- more confortable to use. you don't have to install anything.
+
+A web app is conposed of two parts:
+
+ The client-side - user directly interacts. whatever you see in browser
+ The server-side - which receives requests from the client and sends back data in response. It's also referred as backend.
+
+
+=============================================================================
+
+How the CLIENT and the SERVER Side COMMUNICATED?
+- Hypertext Transfer Protocol(HTTP) to communicate with the server over network
+- Understanding the HTTP is not only thing we need.
+- We need something that can translate the HTTP request and repsonse to a Java app.
+
+SERRVLET Containers
+- nothing more than a Java Object which directly interacts with Servlet Container.
+- translator of the HTTP message for our JAVA App.
+- App run on Web Browser - communicate throught
+- Spring Framework thorugh Servlet container(java objects) - Communication HTTP connect
+- Tomcat is called Servlet Container
+- We do not create servlet instances.
+
+ 			HTTP REQUEST 	Tomcat		Spring APP
+ 			==========>	   Servlet Container
+ 			<==========		SPRINT app's servlet
+ 			HTTP RESPONSE
+
+ Basically do translate between Request and Response
+ - The spring app defines a servlet object and register it into the Servlet Container.
+ - This object and can manage it
+ - Allow the servlet to manage Request and Response
+
+ - Tomcat started on 8080(http) with context path
+ you can open the browser and localhost:8080
+=============================================================================
+Application proporties
+- External configuration
+ 	- We can use spring in build
+server.port= 8080
+
+=============================================================================
+
+Spring MVC Architecture
+- Model View Controller
+
+Request come  	Tomcat							3- Handler Mapping
+	   1			  2- Dispatcher Servlet 			||
+	=======>  =====================> 					||
+	   7				  6							4- Controller
+														||
+														||
+													5- View Resolver
+
+=============================================================================
+
+Controller
+
+@Controller annotation indicated that the annotated class is controller
+- Extention of @Component
+- It's a created a Bean from that class
+- It works with @Component
+
+@RequestMapping
+- This annotation maps HTTPS request to hoandler methods of MVC and REST controller
+- It can be applied to class level and/or method level
+
+=============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+

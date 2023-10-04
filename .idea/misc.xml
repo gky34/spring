@@ -15,10 +15,11 @@
         <option value="$PROJECT_DIR$/Spring-08-Spring-MVC-Model/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-Review-IoC/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-Review-Project/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-09-Spring-Thymeleaf/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
