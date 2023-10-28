@@ -22,8 +22,17 @@ public class Employee extends BaseEntity
     private LocalDate hireDate;
 
     private int salary;
+
     @Enumerated(EnumType.STRING)
     private Gender gender;
+
+    // One Employee has one department
+    // Spring provide us so many Concept One to One - One to Many - Many to One etc
+    // Basically Foreingkey has created, we did it joint
+//    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @JoinColumn(name = "department_id")
+    private Department department;
 
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
         this.firstName = firstName;
@@ -34,3 +43,7 @@ public class Employee extends BaseEntity
         this.gender = gender;
     }
 }
+
+/**
+
+ */
