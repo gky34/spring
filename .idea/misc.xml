@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/Spring-09-Spring-Thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-10-ORM-TableCreation/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-11-ORM-Mapping-OneToOne/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-12-ORM-OneToMany-ManyToMany/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-13-ORM-CinemaLab/pom.xml" />
       </list>
     </option>
   </component>
