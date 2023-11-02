@@ -1,5 +1,8 @@
 package com.review.boostrap;
 
+import com.review.entity.Employee;
+import com.review.repository.DepartmentRepository;
+import com.review.repository.EmployeeRepository;
 import com.review.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -8,9 +11,13 @@ import org.springframework.stereotype.Component;
 public class DataGenerator implements CommandLineRunner
 {
     RegionRepository regionRepository;
+    DepartmentRepository departmentRepository;
+    EmployeeRepository employeeRepository;
 
-    public DataGenerator(RegionRepository regionRepository) {
+    public DataGenerator(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
         this.regionRepository = regionRepository;
+        this.departmentRepository = departmentRepository;
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
@@ -25,5 +32,21 @@ public class DataGenerator implements CommandLineRunner
         System.out.println(regionRepository.findTop2ByCountry("Canada"));
 
         System.out.println("------------REGION END  ----------------");
+
+        System.out.println("------------DEPARTMENT START  ----------------");
+
+        System.out.println(departmentRepository.findByDepartment("Toys"));
+        System.out.println(departmentRepository.findByDivisionIs("Outdoors"));
+        System.out.println(departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
+
+
+        System.out.println("------------DEPARTMENT END  ----------------");
+
+        System.out.println("------------EMPLOYEE START  ----------------");
+
+        System.out.println(employeeRepository.getEmployeeDetails());
+        System.out.println(employeeRepository.getEmployeeSalary());
+
+        System.out.println("------------EMPLOYEE END  ----------------");
     }
 }
