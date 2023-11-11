@@ -3,6 +3,8 @@ package com.review.repository;
 import com.review.entity.Account;
 import com.review.enums.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -33,17 +35,37 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     // ------------------- JPQL QUERIES ------------------- //
 
     //Write a JPQL query that returns all accounts
+    @Query("SELECT a FROM Account a")
+    List<Account> fetchAllAccounts();
 
     //Write a JPQL query to list all admin accounts
+    @Query("SELECT a FROM Account a where a.role = 'ADMIN'")
+    List<Account> fetchAdminAccount();
 
     //Write a JPQL query to sort all accounts with age
+    @Query("SELECT a FROM Account a ORDER BY a.age")
+    List<Account> findAllSortedByAge();
 
     // ------------------- Native QUERIES ------------------- //
 
     //Write a native query to read all accounts with an age lower than a specific value
 
-    //Write a native query to read all accounts that a specific value can be containable in the name, address, country, state city
+    @Query(value = "SELECT * FROM account_details where age < ?1",nativeQuery = true)
+    List<Account> retrieveAllBasedOnAge(Integer num);
 
-    //Write a native query to read all accounts with an age lower than a specific value
+    @Query(value = "SELECT * FROM account_details where age < :inputAge",nativeQuery = true)
+    List<Account> retrieveAllBasedOnAgee(@Param("inputAge") Integer num);
+
+    //Write a native query to read all accounts that a specific value can be containable in the name, address, country, state city
+    @Query(value = "SELECT * FROM account_details WHERE name ILIKE concat('%',?1,'%') OR" +
+            " address ILIKE concat('%',?1,'%') OR " +
+            " country ILIKE concat('%',?1,'%') OR " +
+            " state ILIKE concat('%',?1,'%') OR " +
+            " city ILIKE concat('%',?1,'%') ",nativeQuery = true)
+    List<Account> retrieveBySearchCriteria(String pattern);
+
+
+
+// ILIKE is making key insensitive if I use LIKE key sensitive
 
 }
