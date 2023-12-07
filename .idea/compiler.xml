@@ -16,6 +16,7 @@
         <module name="Spring-01-Core-IoC" />
         <module name="Spring-Review-IoC" />
         <module name="Spring-03-Core-DI" />
+        <module name="Spring-15-Rest" />
         <module name="Spring-05-BeanScope" />
         <module name="Spring-09-Spring-Thymeleaf" />
         <module name="Spring-06-SpringBoot-Demo" />
@@ -26,6 +27,9 @@
         <module name="Spring-12-ORM-OneToMany-ManyToMany" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="vvv" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -38,6 +42,8 @@
       <module name="Spring-12-ORM-OneToMany-ManyToMany" options="-parameters" />
       <module name="Spring-13-ORM-CinemaLab" options="-parameters" />
       <module name="Spring-14-ORM-Queries" options="-parameters" />
+      <module name="Spring-15-Rest" options="-parameters" />
+      <module name="vvv" options="-parameters" />
     </option>
   </component>
 </project>
