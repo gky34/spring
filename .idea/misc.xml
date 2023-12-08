@@ -23,6 +23,8 @@
         <option value="$PROJECT_DIR$/Spring-14-ORM-Queries/pom.xml" />
         <option value="$PROJECT_DIR$/vvv/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-15-Rest/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-16-REST-Jackson/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-17-REST-ConsumingApis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
