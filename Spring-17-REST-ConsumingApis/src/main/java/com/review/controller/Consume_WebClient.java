@@ -21,8 +21,6 @@ public class Consume_WebClient
      */
     private WebClient webClient = WebClient.builder().baseUrl("http://localhost:8080").build();
 
-
-
     private final MovieCinemaRepository movieCinemaRepository;
     private final GenreRepository genreRepository;
 
@@ -35,11 +33,12 @@ public class Consume_WebClient
      * This is more than one MovieCiname and instead of using List' used Flux
      */
     @GetMapping("/flux-movie-cinemas")
-    public Flux<MovieCinema> readAllCinemaFlux()
-    {
+    public Flux<MovieCinema> readAllCinemaFlux(){
 
         return Flux.fromIterable(movieCinemaRepository.findAll());
+
     }
+
 
     /**
      * This is only return one MovieCiname so we're using Mono
@@ -64,11 +63,13 @@ public class Consume_WebClient
      *  Request Body
      */
     @PostMapping("/create-genre")
-    public Mono<Genre> createGenre(@RequestBody Genre genre)
-    {
+    public Mono<Genre> createGenre(@RequestBody Genre genre){
+
         Genre createdGenre = genreRepository.save(genre);
 
         return Mono.just(createdGenre);
+//        return Mono.just(genreRepository.save(genre));
+
     }
 
     /**
@@ -77,8 +78,8 @@ public class Consume_WebClient
      */
 
     @DeleteMapping("/delete/genre/{id}")
-    public Mono<Void> deleteGenre(@PathVariable("id") Long id)
-    {
+    public Mono<Void> deleteGenre(@PathVariable("id") Long id){
+
         genreRepository.deleteById(id);
 
         return Mono.empty();

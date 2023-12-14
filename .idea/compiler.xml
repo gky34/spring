@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Spring-18-Rest-OpenApi3" />
         <module name="Spring-04-Abstranction" />
         <module name="Spring-17-REST-ConsumingApis" />
         <module name="Spring-07-Spring-MVC-Controller" />
@@ -47,6 +48,7 @@
       <module name="Spring-15-Rest" options="-parameters" />
       <module name="Spring-16-REST-Jackson" options="-parameters" />
       <module name="Spring-17-REST-ConsumingApis" options="-parameters" />
+      <module name="Spring-18-Rest-OpenApi3" options="-parameters" />
       <module name="vvv" options="-parameters" />
     </option>
   </component>
