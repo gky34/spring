@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-18-Rest-OpenApi3" />
         <module name="Spring-21-UnitTesting-JUnit5" />
+        <module name="Spring-23-UnitTesting-MockMvc" />
         <module name="Spring-04-Abstranction" />
         <module name="Spring-22-UnitTesting-Mockito" />
         <module name="Spring-07-Spring-MVC-Controller" />
@@ -32,6 +33,7 @@
         <module name="Spring-09-Spring-Thymeleaf" />
         <module name="Spring-19-REST-Security-Keycloak-LicenseApp" />
         <module name="Spring-10-ORM-TableCreation" />
+        <module name="Spring-24-Docker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -57,6 +59,8 @@
       <module name="Spring-20-AOP" options="-parameters" />
       <module name="Spring-21-UnitTesting-JUnit5" options="" />
       <module name="Spring-22-UnitTesting-Mockito" options="-parameters" />
+      <module name="Spring-23-UnitTesting-MockMvc" options="-parameters" />
+      <module name="Spring-24-Docker" options="-parameters" />
       <module name="vvv" options="-parameters" />
     </option>
   </component>
