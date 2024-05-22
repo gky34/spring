@@ -13,4 +13,4 @@ public interface CarRepository extends JpaRepository<Car,Long>
 // Repository work with Entity, so we need to define as class entity name and ID type
 // custom method we can add it as well
 // sql code we can add it as well
-// we can implement any logic and using the JPA methods
+// we can implement any method in repository

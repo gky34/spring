@@ -20,6 +20,7 @@ public class Student {
     private String lastName;
     private String email;
 
+    // If we don't want to see this field in the table, I need to use below annotations
     @Transient
     private String city;
 

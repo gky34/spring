@@ -20,7 +20,6 @@ public class Employee extends BaseEntity
 
     @Column(columnDefinition = "DATE")
     private LocalDate hireDate;
-
     private int salary;
 
     @Enumerated(EnumType.STRING)
@@ -35,8 +34,9 @@ public class Employee extends BaseEntity
     private Department department;
 
     @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
-    @JoinColumn(name = "region_id")
-    private  Region region;
+    @JoinColumn(name= "region_id")
+    private Region region;
+
 
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
         this.firstName = firstName;

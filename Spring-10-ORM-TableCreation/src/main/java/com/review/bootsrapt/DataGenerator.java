@@ -26,4 +26,4 @@ public class DataGenerator implements CommandLineRunner {
         carRepository.save(c3);
     }
 }
-// CommandLineRunner interface whenever app execute, create method whatever we have inside of the method.
+// CommandLineRunner interface whenever app execute, create method whatever we have inside the method.
